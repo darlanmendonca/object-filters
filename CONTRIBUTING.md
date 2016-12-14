@@ -17,6 +17,21 @@ To make easier our jobs with contributions and revisions, before all, open/check
 ### Specs
 
 - javascript is writed in es6
+- we follow patterns from [node](https://github.com/felixge/node-style-guide) and [airbnb](https://github.com/airbnb/javascript) (rules in .eslintrc.js)
 - we have a few scripts in `package.json` take a look
-  - `npm run lint` check if javascript passed in js pattern, using eslint (check rules in .eslintrc.js)
+  - `npm run lint` check if javascript passed in js pattern
   - `npm t` or `npm test` will run unit tests (only if lint passed)
+
+### Resuming
+
+Just clone the module, then
+
+```sh
+# install dependencies with
+npm i
+```
+
+```sh
+# and to test run
+npm t
+```
