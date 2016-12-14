@@ -4,7 +4,7 @@ filter an object/json specifying the keys.
 
 ## install
 
-```
+```sh
 # not available yet, object-filter already used to another modules
 npm i --save object-filter
 ```
