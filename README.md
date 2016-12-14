@@ -2,7 +2,7 @@
 
 # object-filter
 
-filter an object/json specifying the keys.
+Filter object by keys
 
 ## install
 
