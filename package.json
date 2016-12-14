@@ -1,0 +1,25 @@
+{
+  "name": "object-filters",
+  "version": "0.0.1",
+  "description": "Filter object by keys",
+  "main": "sources/index.js",
+  "scripts": {
+    "test": "scripts/test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darlanmendonca/object-filters.git"
+  },
+  "keywords": [
+    "object",
+    "obj",
+    "filters",
+    "filter"
+  ],
+  "author": "Darlan Mendonça <darlanmendonca@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darlanmendonca/object-filters/issues"
+  },
+  "homepage": "https://github.com/darlanmendonca/object-filters#readme"
+}
