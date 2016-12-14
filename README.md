@@ -48,7 +48,7 @@ obj.filter(['firstname', 'lastname'])
 
 ```js
 // negative strings
-obj.filter('-email')
+obj.filter('-email -address') // or obj.filter(['-email', '-address'])
 ```
 
 ```js
