@@ -1,20 +1,20 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-# object-filter
+# object-filters
 
 Filter object by keys
 
 ## install
 
 ```sh
-# not available yet, object-filter already used to another modules
-npm i --save object-filter
+# not available yet, working in progress
+npm i --save object-filters
 ```
 
 ## usage
 
 ```js
-import filter from 'object-filter'
+import filters from 'object-filters'
 
 const obj = {
   firstname: 'John',
@@ -26,7 +26,7 @@ const obj = {
   }
 }
 
-const filtered = obj.filter('firstname lastname')
+const filtered = obj.filters('firstname lastname')
 
 // =>
 
@@ -36,24 +36,24 @@ const filtered = obj.filter('firstname lastname')
 }
 ```
 
-The method `filter` works with:
+The method `filters` works with:
 
 ```js
 // strings separated by space
-obj.filter('firstname lastname')
+obj.filters('firstname lastname')
 ```
 
 ```js
 // array of strings
-obj.filter(['firstname', 'lastname'])
+obj.filters(['firstname', 'lastname'])
 ```
 
 ```js
 // negative strings
-obj.filter('-email -address') // or obj.filter(['-email', '-address'])
+obj.filters('-email -address') // or obj.filters(['-email', '-address'])
 ```
 
 ```js
 // nested object
-obj.filter('firstname lastname address.castle')
+obj.filters('firstname lastname address.castle')
 ```
