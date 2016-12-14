@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Filter object by keys",
   "main": "sources/index.js",
+  "engines": {
+    "node": ">=0.4.0"
+  },
   "scripts": {
     "lint": "scripts/lint.sh",
     "pretest": "scripts/lint.sh",
