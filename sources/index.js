@@ -1,4 +1,4 @@
-module.exports = objectFilters()
+module.exports = objectFilters
 
 function objectFilters() {
   Object.prototype.filters = filters
