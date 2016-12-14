@@ -46,9 +46,15 @@ describe('object-filters', () => {
       .to.deep.equal({firstname, lastname})
   })
 
-  xit('filter by nested object', () => {
+  xit('filter by nested object (strings)', () => {
     const {firstname, lastname} = object
     expect(object.filters('firstname lastname address.castle'))
+      .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
+  })
+
+  xit('filter by nested object (strings)', () => {
+    const {firstname, lastname} = object
+    expect(object.filters(['firstname', 'lastname', 'address.castle']))
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
   })
 })
