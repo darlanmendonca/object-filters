@@ -1,3 +1,5 @@
+'use strict'
+
 let optional = 1;
 let required = 2;
 
