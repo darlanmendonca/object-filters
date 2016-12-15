@@ -26,6 +26,7 @@ const obj = {
   }
 }
 
+// return a new object, without alter previous obj
 const filtered = obj.filters('firstname lastname')
 
 // =>
