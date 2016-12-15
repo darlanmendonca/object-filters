@@ -2,14 +2,15 @@
   "name": "object-filters",
   "version": "0.0.1",
   "description": "Filter object by keys",
-  "main": "sources/index.js",
+  "main": "sources/index.es5.js",
   "engines": {
     "node": ">=0.4.0"
   },
   "scripts": {
     "lint": "scripts/lint.sh",
     "pretest": "scripts/lint.sh",
-    "test": "scripts/test.sh"
+    "test": "scripts/test.sh",
+    "posttest": "scripts/transpile.sh"
   },
   "repository": {
     "type": "git",
