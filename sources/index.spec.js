@@ -57,4 +57,9 @@ describe('object-filters', () => {
     expect(object.filters(['firstname', 'lastname', 'address.castle']))
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
   })
+
+  xit('not filter', () => {
+    expect(object.filters())
+      .to.deep.equal(object)
+  })
 })
