@@ -1,5 +1,7 @@
+import clone from 'clone'
+
 module.exports = filters
 
 function filters() {
-  return this
+  return clone(this)
 }

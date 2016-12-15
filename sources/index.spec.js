@@ -24,6 +24,21 @@ describe('object-filters', () => {
       .to.be.an('function')
   })
 
+  it('always return a new object', () => {
+    const original = {
+      firstname: 'John',
+      lastname: 'Snow',
+      email: 'iknownothing@snow.com',
+      address: {
+        castle: 'Black',
+        region: 'North',
+      },
+    }
+
+    object.filters('firstname')
+    expect(object).to.deep.equal(original)
+  })
+
   xit('filter by strings separated by space', () => {
     const {firstname, lastname} = object
     expect(object.filters('firstname lastname'))
@@ -58,23 +73,6 @@ describe('object-filters', () => {
     const {firstname, lastname} = object
     expect(object.filters(['firstname', 'lastname', 'address.castle']))
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
-  })
-
-  xit('always return a new object', () => {
-    const original = {
-      firstname: 'John',
-      lastname: 'Snow',
-      email: 'iknownothing@snow.com',
-      address: {
-        castle: 'Black',
-        region: 'North',
-      },
-    }
-
-    const firstname = object.firstname
-
-    expect(object.filters('firstname')).to.deep.equal({firstname})
-    expect(object).to.deep.equal(original)
   })
 
   xit('not filter', () => {
