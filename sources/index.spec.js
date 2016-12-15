@@ -13,6 +13,16 @@ const object = {
   },
 }
 
+object.filters('firstname lastname')
+object.filters(['firstname', 'lastname'])
+object.filters(['   firstname    lastname  '])
+object.filters(['   firstname','    lastname  '])
+object.filters(0)
+object.filters([5, 0, 'firstname'])
+object.filters(undefined)
+object.filters(['-firstname', 'lastname'])
+object.filters('-firstname    -lastname')
+
 describe('object-filters', () => {
   it('module export a function', () => {
     expect(filters).to.be.an('function')
