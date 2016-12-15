@@ -9,9 +9,20 @@ function filters(options) {
     .filter(key => key.startsWith('-'))
     .map(key => key.replace('-', ''))
 
-  console.log(keys, 'positive', positiveKeys, 'negative', negativeKeys)
+  let obj = this
 
-  const obj = clone(this)
+  if (negativeKeys.length) {
+    obj = clone(obj)
+    for (const key of negativeKeys) {
+      delete obj[key]
+    }
+  } else if (positiveKeys.length) {
+    obj = {}
+    for (const key of positiveKeys) {
+      obj[key] = this[key]
+    }
+  }
+
   return obj
 }
 
