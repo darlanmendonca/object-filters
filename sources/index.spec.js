@@ -1,6 +1,8 @@
 import filters from './index.js'
 import {expect} from 'chai'
 
+Object.prototype.filters = filters
+
 const object = {
   firstname: 'John',
   lastname: 'Snow',

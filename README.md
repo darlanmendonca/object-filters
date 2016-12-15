@@ -16,6 +16,9 @@ npm i --save object-filters
 ```js
 import filters from 'object-filters'
 
+// add filters as prototype to use in all objects
+Object.prototype.filters = filters
+
 const obj = {
   firstname: 'John',
   lastname: 'Snow',
@@ -29,8 +32,7 @@ const obj = {
 // return a new object, without alter previous obj
 const filtered = obj.filters('firstname lastname')
 
-// =>
-
+// filtered is now
 {
   firstname: 'John',
   lastname: 'Snow',
