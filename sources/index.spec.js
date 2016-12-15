@@ -13,16 +13,6 @@ const object = {
   },
 }
 
-object.filters('firstname lastname')
-object.filters(['firstname', 'lastname'])
-object.filters(['   firstname    lastname  '])
-object.filters(['   firstname','    lastname  '])
-object.filters(0)
-object.filters([5, 0, 'firstname'])
-object.filters(undefined)
-object.filters(['-firstname', 'lastname'])
-object.filters('-firstname    -lastname')
-
 describe('object-filters', () => {
   it('module export a function', () => {
     expect(filters).to.be.an('function')
@@ -49,25 +39,25 @@ describe('object-filters', () => {
     expect(object).to.deep.equal(original)
   })
 
-  xit('filter by strings separated by space', () => {
+  it('filter by strings separated by space', () => {
     const {firstname, lastname} = object
     expect(object.filters('firstname lastname'))
       .to.deep.equal({firstname, lastname})
   })
 
-  xit('filter by array of strings', () => {
+  it('filter by array of strings', () => {
     const {firstname, lastname} = object
     expect(object.filters(['firstname', 'lastname']))
       .to.deep.equal({firstname, lastname})
   })
 
-  xit('filter by negative strings separated by space', () => {
+  it('filter by negative strings separated by space', () => {
     const {firstname, lastname} = object
     expect(object.filters('-email -address'))
       .to.deep.equal({firstname, lastname})
   })
 
-  xit('filter by negative strings array', () => {
+  it('filter by negative strings array', () => {
     const {firstname, lastname} = object
     expect(object.filters('-email -address'))
       .to.deep.equal({firstname, lastname})
@@ -79,13 +69,13 @@ describe('object-filters', () => {
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
   })
 
-  xit('filter by nested object (strings)', () => {
+  xit('filter by nested object (array)', () => {
     const {firstname, lastname} = object
     expect(object.filters(['firstname', 'lastname', 'address.castle']))
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
   })
 
-  xit('not filter', () => {
+  it('not filter', () => {
     expect(object.filters())
       .to.deep.equal(object)
   })
