@@ -3,5 +3,6 @@ import clone from 'clone'
 module.exports = filters
 
 function filters() {
-  return clone(this)
+  const obj = clone(this)
+  return obj
 }

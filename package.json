@@ -27,12 +27,14 @@
     "url": "https://github.com/darlanmendonca/object-filters/issues"
   },
   "homepage": "https://github.com/darlanmendonca/object-filters#readme",
+  "dependencies": {
+    "clone": "^2.1.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
     "babel-preset-es2015": "^6.18.0",
     "chai": "^3.5.0",
-    "clone": "^2.1.0",
     "coveralls": "^2.11.15",
     "eslint": "^3.12.2",
     "istanbul": "^0.4.5",
