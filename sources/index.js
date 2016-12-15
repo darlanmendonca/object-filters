@@ -4,10 +4,10 @@ module.exports = filters
 
 function filters(options) {
   const keys = splitKeys(options)
+  const positiveKeys = keys.filter(key => !key.startsWith('-'))
   const negativeKeys = keys
     .filter(key => key.startsWith('-'))
     .map(key => key.replace('-', ''))
-  const positiveKeys = keys.filter(key => !key.startsWith('-'))
 
   console.log(keys, 'positive', positiveKeys, 'negative', negativeKeys)
 
