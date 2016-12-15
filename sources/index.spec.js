@@ -60,6 +60,23 @@ describe('object-filters', () => {
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
   })
 
+  xit('always return a new object', () => {
+    const original = {
+      firstname: 'John',
+      lastname: 'Snow',
+      email: 'iknownothing@snow.com',
+      address: {
+        castle: 'Black',
+        region: 'North',
+      },
+    }
+
+    const firstname = object.firstname
+
+    expect(object.filters('firstname')).to.deep.equal({firstname})
+    expect(object).to.deep.equal(original)
+  })
+
   xit('not filter', () => {
     expect(object.filters())
       .to.deep.equal(object)
