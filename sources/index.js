@@ -22,7 +22,7 @@ function splitKeys(options='') {
 
   return keys
     .trim()
-    .replace(/\s{2,}/, ' ')
+    .replace(/\s{2,}/g, ' ')
     .split(' ')
     .filter(key => key)
 }
