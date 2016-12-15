@@ -1,4 +1,6 @@
 import clone from 'clone'
+import unset from 'unset-value'
+import deep from 'deep-getset'
 
 module.exports = filters
 
@@ -14,12 +16,16 @@ function filters(options) {
   if (negativeKeys.length) {
     obj = clone(obj)
     for (const key of negativeKeys) {
-      delete obj[key]
+      key.includes('.')
+        ? unset(obj, key)
+        : delete obj[key]
     }
   } else if (positiveKeys.length) {
     obj = {}
     for (const key of positiveKeys) {
-      obj[key] = this[key]
+      key.includes('.')
+        ? deep.set(obj, key.split('.'), deep.get(this, key.split('.')))
+        : obj[key] = this[key]
     }
   }
 
