@@ -2,13 +2,14 @@
   "name": "object-filters",
   "version": "0.0.2",
   "description": "Filter object by keys",
-  "main": "sources/index.js",
+  "main": "sources/index.es5.js",
   "engines": {
     "node": ">=6.0.0"
   },
   "scripts": {
     "lint": "scripts/lint.sh",
-    "pretest": "scripts/lint.sh",
+    "transpile": "scripts/transpile.sh",
+    "pretest": "npm run lint && npm run transpile",
     "test": "scripts/test.sh"
   },
   "repository": {
