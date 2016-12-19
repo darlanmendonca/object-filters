@@ -4,7 +4,7 @@
   "description": "Filter object by keys",
   "main": "sources/index.js",
   "engines": {
-    "node": ">=0.4.0"
+    "node": ">=6.0.0"
   },
   "scripts": {
     "lint": "scripts/lint.sh",
@@ -28,7 +28,10 @@
   },
   "homepage": "https://github.com/darlanmendonca/object-filters#readme",
   "dependencies": {
-    "clone": "^2.1.0"
+    "clone": "^2.1.0",
+    "deep-get-set": "^1.1.0",
+    "deep-getset": "^1.0.2",
+    "unset-value": "^0.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

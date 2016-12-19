@@ -63,16 +63,28 @@ describe('object-filters', () => {
       .to.deep.equal({firstname, lastname})
   })
 
-  xit('filter by nested object (strings)', () => {
+  it('filter by nested (strings)', () => {
     const {firstname, lastname} = object
     expect(object.filters('firstname lastname address.castle'))
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
   })
 
-  xit('filter by nested object (array)', () => {
+  it('filter by nested (array)', () => {
     const {firstname, lastname} = object
     expect(object.filters(['firstname', 'lastname', 'address.castle']))
       .to.deep.equal({firstname, lastname, address: {castle: 'Black'}})
+  })
+
+  it('filter by negative nested (strings)', () => {
+    const {firstname, lastname, email} = object
+    expect(object.filters('firstname lastname -address.castle'))
+      .to.deep.equal({firstname, lastname, email, address: {region: 'North'}})
+  })
+
+  it('filter by negative nested (array)', () => {
+    const {firstname, lastname, email} = object
+    expect(object.filters(['firstname', 'lastname', '-address.castle']))
+      .to.deep.equal({firstname, lastname, email, address: {region: 'North'}})
   })
 
   it('not filter', () => {
