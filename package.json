@@ -1,6 +1,6 @@
 {
   "name": "object-filters",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Filter object by keys",
   "main": "sources/index.js",
   "engines": {
