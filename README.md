@@ -7,7 +7,6 @@ Filter object by keys. For node.js 6.x or higher
 ## install
 
 ```sh
-# not available yet, working in progress
 npm i --save object-filters
 ```
 
