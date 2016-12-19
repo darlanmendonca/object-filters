@@ -2,7 +2,7 @@
 
 # object-filters
 
-Filter object by keys
+Filter object by keys. For node.js 6.x or higher
 
 ## install
 
