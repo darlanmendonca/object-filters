@@ -2,7 +2,10 @@
   "name": "object-filters",
   "version": "0.0.4",
   "description": "Filter object by keys",
-  "main": "dist/index.es5.js",
+  "main": "sources/index.js",
+  "bin": {
+    "birl": "./bin/birl.js"
+  },
   "engines": {
     "node": ">=6.0.0"
   },
