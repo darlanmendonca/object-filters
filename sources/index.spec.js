@@ -1,5 +1,5 @@
-import filters from './index.js'
-import {expect} from 'chai'
+const filters = require('./index.js')
+const {expect} = require('chai')
 
 Object.prototype.filters = filters
 

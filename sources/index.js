@@ -1,6 +1,6 @@
-import clone from 'clone'
-import unset from 'unset-value'
-import deep from 'deep-getset'
+const clone = require('clone')
+const unset = require('unset-value')
+const deep = require('deep-getset')
 
 module.exports = filters
 
