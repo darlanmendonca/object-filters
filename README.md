@@ -59,3 +59,17 @@ obj.filters('-email -address') // or obj.filters(['-email', '-address'])
 // nested object
 obj.filters('firstname lastname address.castle')
 ```
+
+## bin
+
+If you want to use as a CLI
+
+```sh
+npm i -g object-filters
+```
+
+and stream any content with pipe and filter, e.g.
+
+```sh
+cat path/to/file.json | object-filters key1 key2
+```
